@@ -1,20 +1,18 @@
-const decreasebtn = document.getElementById("decreasebtn");
-const resetbtn = document.getElementById("resetbtn");
-const increasebtn = document.getElementById("increasebtn");
-const countLabel = document.getElementById("countLabel");
-let count = 0;
+const mybutton = document.getElementById("mybutton");
+const label1 = document.getElementById("label1");
+const label2 = document.getElementById("label2");
+const label3 = document.getElementById("label3");
+const min = 1;
+const max = 6;
+let randomNum1;
+let randomNum2;
+let randomNum3;
 
-increasebtn.onclick = function(){
-    count++;
-    countLabel.textContent = count;
+mybutton.onclick = function(){
+    randomNum1 = Math.floor(Math.random() * max) + min;
+    randomNum2 = Math.floor(Math.random() * max) + min;
+    randomNum3 = Math.floor(Math.random() * max) + min;
+    label1.textContent = randomNum1;
+    label2.textContent = randomNum2;
+    label3.textContent = randomNum3;
 }
-decreasebtn.onclick = function(){
-    count--;
-    countLabel.textContent = count;
-}
-resetbtn.onclick = function(){
-    count=0;
-    countLabel.textContent = count;
-}
-
-// Counter Program.
