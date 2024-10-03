@@ -1,18 +1,31 @@
-const mybutton = document.getElementById("mybutton");
-const label1 = document.getElementById("label1");
-const label2 = document.getElementById("label2");
-const label3 = document.getElementById("label3");
-const min = 1;
-const max = 6;
-let randomNum1;
-let randomNum2;
-let randomNum3;
 
-mybutton.onclick = function(){
-    randomNum1 = Math.floor(Math.random() * max) + min;
-    randomNum2 = Math.floor(Math.random() * max) + min;
-    randomNum3 = Math.floor(Math.random() * max) + min;
-    label1.textContent = randomNum1;
-    label2.textContent = randomNum2;
-    label3.textContent = randomNum3;
+
+
+const mycheckbox = document.getElementById("mycheckbox");
+const visabtn = document.getElementById("visabtn");
+const mastercard = document.getElementById("mastercard");
+const paypalbtn = document.getElementById("paypalbtn");
+const mysubmit = document.getElementById("mysubmit");
+const subresult = document.getElementById("subresult");
+const paymentresult = document.getElementById("paymentresult");
+
+mysubmit.onclick = function(){
+    if(mycheckbox.checked){
+        subresult.textContent = `You are subscribe`;
+    }else{
+        subresult.textContent = `you are NoT subcribed!`;
+    }
+
+    if(visabtn.checked){
+        paymentresult.textContent = `you are paying with visa!`;
+    } 
+    else if(mastercard.checked){
+        paymentresult.textContent = `you are  paying with mastercard!`;
+    }
+    else if(paypalbtn.checked){
+        paymentresult.textContent = `you are paying with paypal`;
+    }
+    else{
+        paymentresult.textContent = `you must select a payment type`;
+    }
 }
