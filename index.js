@@ -1,24 +1,16 @@
 
 
+const arr = [
+    [1,2,3],
+    [3,4,5],
+    [6,7,8]
+];
+let r = 3
+let c = 3;
 
+for(let i=0;i<r;i++){
+    for(let j=0;j<c;j++){
+        console.log(j)
 
-
-
-function Clock(){
-    var now = new Date()
-    var hours = now.getHours();
-    var minutes = now.getMinutes();
-    var seconds = now.getSeconds();
-
-    hours = hours < 10 ? "0" + hours: hours
-    minutes = minutes < 10 ? "0" + minutes: minutes
-    seconds = seconds < 10 ? "0" + seconds: seconds
-
-    var Time = hours + ":" + minutes + ":" + seconds
-    document.getElementById("clock").innerHTML = Time
+    }
 }
-
-setInterval(Clock, 1000)
-Clock();
-
-
